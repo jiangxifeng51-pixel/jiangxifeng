@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>张启凡 · 登录认证示例</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <h1>登录认证示例</h1>
+    <p class="lead">注册后登录，观察 Access Token、Refresh Token 和受保护请求的完整流程。</p>
+
+    <section class="card">
+      <label>用户名
+        <input id="username" value="zhangqifan" autocomplete="username">
+      </label>
+      <label>密码
+        <input id="password" type="password" value="password123" autocomplete="current-password">
+      </label>
+      <div class="actions">
+        <button id="register">注册</button>
+        <button id="login">登录</button>
+        <button id="me">访问 /api/me</button>
+        <button id="refresh">刷新令牌</button>
+        <button id="logout" class="secondary">退出</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>当前 Access Token</h2>
+      <code id="token">尚未登录</code>
+    </section>
+
+    <section class="card">
+      <h2>请求结果</h2>
+      <pre id="result">等待操作……</pre>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
